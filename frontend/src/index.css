@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=La+Belle+Aurore&family=Martian+Mono:wght@300&family=Montserrat:wght@800&family=Open+Sans:wght@300;600;700&family=Roboto:wght@300&family=Rubik+Gemstones&family=Ubuntu:wght@300;400&display=swap');
+
+
+
+
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  background: #000;
+}
+
+
+
+.bold {
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+::-webkit-scrollbar{
+  height:  8px;
+  width: 12px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 30px;
+  background: rgb(219,219,219);
+}
+
+.zoom-img {
+  transition: all 0.3s ease-in-out;
+}
+
+.zoom-img:hover {
+  transform: scale(1.1);
+}
