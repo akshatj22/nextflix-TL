@@ -38,7 +38,7 @@ const allowList = [process.env.ALLOWED_URL_1,process.env.ALLOWED_URL_2];
 // app.use(cors({...corsOptionsDelegate, methods: "*"}));
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000',"https://nextflix-tl.vercel.app"],
     credentials: true,
 
 }
