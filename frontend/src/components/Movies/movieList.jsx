@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
-import { request } from "../../api/request";
 import Blur from "../../baseUI/blur";
 import backend from "../../api/backend";
+import { useNavigate, Link } from "react-router-dom";
 
 const MovieList = () => {
+    const navigate = useNavigate();
     const [movies, setMovies] = useState("")
 
     useEffect(() => {
@@ -14,14 +15,15 @@ const MovieList = () => {
         })();
     }, [])
 
+
+
     return (
         <>
-        <h1 style={{color: "#fff",fontSize:"36px",padding:"15px 0"}}>What's Popular?</h1>
+        <h1 style={{color: "#fff",fontSize:"36px",padding:"15px 0",fontWeight:"bold"}}>What's Popular?</h1>
         <div className="flex pb-5 pr-9 pl-5 overflow-x-auto">
                 {   movies.length === 20 &&
                     movies.map((movie) => (
-
-                        <MovieCard id={movie.id} title={movie.title} release_date={movie.release_date}/>
+                        <Link to={`/movie/${movie._id}`}><MovieCard id={movie.id} title={movie.title} release_date={movie.release_date} /></Link>
                     ))
                 }
             

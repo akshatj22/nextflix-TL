@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import tmdb from "../../api/tmdb";
+import { useNavigate } from "react-router-dom";
 
 
 const getPosterURL = (posterpath) =>{
@@ -10,6 +11,7 @@ const getPosterURL = (posterpath) =>{
 const MovieCard = ({ id,title,release_date }) => {
     
     const [poster_path, setPoster] = useState("");
+    const navigate = useNavigate();
     
     async function getPoster(){
         const m_data = await tmdb.get(`/movie/${id}`)

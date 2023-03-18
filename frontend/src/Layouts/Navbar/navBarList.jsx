@@ -5,7 +5,7 @@ const NavBarList = ({ items }) => {
         let itemlist = null;
         switch (item.type) {
             case 'logo':
-                itemlist = <img src={item.src} className="h-5 min-w-[154px]  " alt={item.name} />
+                itemlist = <img src={item.src} className="h-5 min-w-[154px]  " alt={item.name}  />
                 break;
             case 'language':
                 itemlist = <p className="border-Netflix border-solid text-Netflix rounded-[3px] py-[3px] px-[5px] border-[1px] hover:bg-Netflix hover:text-darkRed transition-duration:1s">{item.name}</p>
